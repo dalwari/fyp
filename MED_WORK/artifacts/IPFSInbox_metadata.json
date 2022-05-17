@@ -1,0 +1,108 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "response",
+						"type": "string"
+					}
+				],
+				"name": "inboxResponse",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_ipfsHash",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "ipfsSent",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "checkInbox",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_ipfsHash",
+						"type": "string"
+					}
+				],
+				"name": "sendIPFS",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\IPFSInbox.sol": "IPFSInbox"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\IPFSInbox.sol": {
+			"keccak256": "0x12223a96bec99d6bba0d30c826e9e7ea4da888b97dd9ab16cddbd9ba6996105e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4f1b7862951ffa82337a43582adc2bc4ee7fcd64f0655a879f1a136f8a5ae203",
+				"dweb:/ipfs/QmewWTwyZc9PyPWKwmoeRJNdZzdiYQq7zJ4ZgCchafpeVf"
+			]
+		}
+	},
+	"version": 1
+}
