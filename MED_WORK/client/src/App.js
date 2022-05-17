@@ -197,7 +197,7 @@ class App extends Component {
         </form>
         <h2> 3. Receive Notifications </h2>
         <button onClick={this.handleReceiveIPFS}>Receive IPFS</button>
-        <p>{this.state.vedIPFSrecei}</p>
+        <p>{this.state.receivedIPFS}</p>
       </div>
     );
   }
