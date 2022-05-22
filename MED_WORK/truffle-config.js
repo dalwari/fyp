@@ -10,6 +10,11 @@ const path = require("path");
     }
   }
 };*/
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+//var HDWalletProvider = require("truffle-hdwallet-provider");
+const infuraKey = "1719e3b74426434582812833825c86cc";
+const fs = require("fs");
+const mnemonic = fs.readFileSync("D:\\MED_WORK\\.secret").toString().trim();
 module.exports = {
   contracts_build_directory: "./client/src",
   networks: {
@@ -19,5 +24,28 @@ module.exports = {
       protocol: "https",
       network_id: "*", // Match any network id
     },
+    ropsten: {
+      provider: new HDWalletProvider(
+        mnemonic,
+        `https://ropsten.infura.io/v3/${infuraKey}`
+      ),
+      network_id: 3, // Ropsten's id
+      gas: 5500000, // Ropsten has a lower block limit than mainnet
+    },
   },
+  /*ropsten: {
+    provider: new HDWalletProvider(
+      mnemonic,
+      `https://ropsten.infura.io/v3/${infuraKey}`
+    ),
+    network_id: 3, // Ropsten's id
+    gas: 5500000, // Ropsten has a lower block limit than mainnet
+  },*/
+  /*ropsten: {
+    provider: function() {
+      return new HDWalletProvider(MNEMONIC, `https://ropsten.infura.io/v3/${infuraKey}`)
+    },'
+    network_id: 3,
+    gas: 4000000      //make sure this gas allocation isn't over 4M, which is the max
+  }*/
 };
